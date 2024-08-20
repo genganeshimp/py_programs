@@ -1,0 +1,23 @@
+#Adding numbers in two given lists
+def sum_lst(l1,l2):
+    nl1=len(l1)
+    nl2=len(l2)
+    mn=max(nl1,nl2)
+    if nl1 > nl2:
+        l2=l2+[0]*(nl1-nl2)
+    elif nl2 > nl1:
+        l1=l1+[0]*(nl2-nl1)
+    print(l1,l2,sep='\n')
+    res_lst=[]
+    carry=0
+    for i in range(0,mn):
+        tot = l1[i]+l2[i]+carry
+        res_lst.append(tot%10)
+        carry=tot//10
+    if carry==1: res_lst.append(carry)
+    print(res_lst)
+        
+
+l1 = [9,9,9,9,9,9,9]
+l2 = [9,9,9,9]
+sum_lst(l1,l2)
