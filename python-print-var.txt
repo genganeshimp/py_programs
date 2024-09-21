@@ -1,0 +1,33 @@
+Pass it as a tuple:
+
+print("Total score for %s is %s" % (name, score))
+A tuple with a single element looks like ('this',).
+
+Here are some other common ways of doing it:
+
+Pass it as a dictionary:
+print("Total score for %(n)s is %(s)s" % {'n': name, 's': score})
+There's also new-style string formatting, which might be a little easier to read:
+
+Use new-style string formatting:
+print("Total score for {} is {}".format(name, score))
+
+Use new-style string formatting with numbers (useful for reordering or printing the same one multiple times):
+print("Total score for {0} is {1}".format(name, score))
+
+Use new-style string formatting with explicit names:
+print("Total score for {n} is {s}".format(n=name, s=score))
+
+Concatenate strings:
+print("Total score for " + str(name) + " is " + str(score))
+The clearest two, in my opinion:
+
+Just pass the values as parameters:
+print("Total score for", name, "is", score)
+If you don't want spaces to be inserted automatically by print in the above example, change the sep parameter:
+
+print("Total score for ", name, " is ", score, sep='from __future__ import print_function
+
+Use the new f-string formatting in Python 3.6:
+print(f'Total score for {name} is {score}')
+

@@ -1,0 +1,19 @@
+
+
+# Python different cases 
+
+1. Converting list to string
+2. Converting string to list
+3. Remove spaces from sentence
+4. Converting sentence (words) to list of words. 
+5. Converting dict to sorted list (based on keys, based on values)
+s.split()
+''.join(lst)
+list(s)
+sorted_footballers_by_goals = sorted(footballers_goals.items(), key=lambda x:x[1])
+print(sorted(key_value.items(), key = lambda kv: (kv[1], kv[0])))
+6. Get ascii value for char -- ord('a')
+7. Get char for ascii value -- char(97)
+8. Convert the datatype of all elements in list at a time
+   list(map(str,lst))  < lst=[1,2,3,4,5]
+
